@@ -26,6 +26,7 @@ for n = 1:length(t)-1
     P      = (I -K*H)*P;                        % 'a posteriori' covariance
     
     y(k)   = H*x(:,k);                          % estimated output
+    k      = k +1;
 end
 
 x = transpose(x);
